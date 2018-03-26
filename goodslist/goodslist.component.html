@@ -1,0 +1,11 @@
+<body>
+<ul>
+  <li *ngFor="let item of list;let i=index;"(click)="goDetail(i)">
+    <!-- <a [routerLink]="['/gooddetail/',i]">{{item}}</a> -->
+    <img src="{{item.goodsListImg}}" alt="">
+    <div id="tang">
+    <p>{{item.goodsName}}</p>
+    </div>
+  </li>
+</ul>  
+</body>
