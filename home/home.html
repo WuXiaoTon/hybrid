@@ -1,0 +1,125 @@
+<ion-header>
+
+  <ion-navbar color="bright" #content>
+<!--
+      //<ion-icon ios="ios-arrow-back"></ion-icon>
+      //<ion-icon name="arrow-back"></ion-icon>
+    -->
+    <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon> 
+    </button>
+    <ion-title>
+        <img src="assets/imgs/ziya.png" alt="" style="height:40px;">
+        <button ion-button icon-only style="float:right;line-height:40px;padding-top:16px;padding-left:10px;" menuToggle>
+          <ion-icon name="search"></ion-icon> 
+      </button>
+    </ion-title>
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-menu [content]="content" type="overlay">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>个人中心</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <p style="text-align:center;">hello aloha</p>
+      <ion-list>
+          <button ion-item>
+            设置
+          </button>
+        </ion-list>
+    </ion-content>
+  </ion-menu>
+
+<ion-content>
+  <!--
+  <h2>Welcome to Ionic!</h2>
+  <button ion-button (click)="goSub()">hello</button>
+  -->
+  <ion-slides autoplay="2000" loop="true">
+    <ion-slide><img src="assets/imgs/slide1.png" alt=""></ion-slide>
+    <ion-slide><img src="assets/imgs/slide1.png" alt=""></ion-slide>
+  </ion-slides>
+
+  <ion-segment [(ngModel)]="friendship" color="bright">
+    <ion-segment-button value="msg">找信息</ion-segment-button>
+    <ion-segment-button value="ser">找服务</ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="friendship">
+  <ion-list *ngSwitchCase="'msg'">
+    <ion-item>
+       <button><img src="assets/imgs/icon1.png" alt=""><p>资产包转让</p></button>
+      <button><img src="assets/imgs/icon2.png" alt=""><p>债权转让</p> </button>
+      <button><img src="assets/imgs/icon3.png" alt=""><p>固产转让</p></button>
+      <button><img src="assets/imgs/icon4.png" alt=""><p>商业保理</p></button>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'ser'">
+      <ion-item>
+         <button><img src="assets/imgs/icon4.png" alt=""><p>资产包转让</p></button>
+        <button><img src="assets/imgs/icon3.png" alt=""><p>债权转让</p> </button>
+        <button><img src="assets/imgs/icon2.png" alt=""><p>固产转让</p></button>
+        <button><img src="assets/imgs/icon1.png" alt=""><p>商业保理</p></button>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <ion-list>
+      <div>
+      <p class="til">资产包转让</p>
+      <ion-item>
+       <ion-thumbnail item-start>
+         <img src="assets/imgs/icon1.png">
+       </ion-thumbnail>
+       <div class="det">
+           <p>地区：北京</p>
+           <p>来源：银行</p>
+           <p>类型：抵押</p>
+         </div>
+       <button ion-button clear item-end><img src="assets/imgs/right.png" alt=""></button>
+      </ion-item>
+     </div>
+     <div>
+        <p class="til">资产包转让</p>
+        <ion-item>
+         <ion-thumbnail item-start>
+           <img src="assets/imgs/icon1.png">
+         </ion-thumbnail>
+         <div class="det">
+             <p>地区：北京</p>
+             <p>来源：银行</p>
+             <p>类型：抵押</p>
+           </div>
+         <button ion-button clear item-end><img src="assets/imgs/right.png" alt=""></button>
+        </ion-item>
+       </div>
+       <div>
+          <p class="til">资产包转让</p>
+          <ion-item>
+           <ion-thumbnail item-start>
+             <img src="assets/imgs/icon1.png">
+           </ion-thumbnail>
+           <div class="det">
+               <p>地区：北京</p>
+               <p>来源：银行</p>
+               <p>类型：抵押</p>
+             </div>
+           <button ion-button clear item-end><img src="assets/imgs/right.png" alt=""></button>
+          </ion-item>
+         </div>
+</ion-list>
+
+        <ion-infinite-scroll (ionInfinite)="doInfinite($event)" threshold="100px">
+            <ion-infinite-scroll-content loadingText="正在加载...">
+            </ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+
+
+
+
+</ion-content>
