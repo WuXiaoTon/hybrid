@@ -1,0 +1,69 @@
+<ion-header>
+
+  <ion-navbar color="bright">
+    <ion-title>message</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="msg_in">
+  <ion-list no-lines>
+    <ion-item>
+      <div class="send">
+        <div class="head-name">
+          <img src="assets/imgs/logo.png">
+          <br/>
+          Ionic
+        </div>
+        <div>
+          <div class="left_angle"></div>
+          <span>Hello</span>
+        </div>
+      </div>
+    </ion-item>
+    <ion-item>
+        <div class="receiver">
+          <div class="head-name">
+            <img src="assets/imgs/logo.png">
+            <br/>
+            Ionic
+          </div>
+          <div>
+            <div class="right_angle"></div>
+            <span>
+              Build amazing apps in one
+              <br/> codebase,for any platform,
+              <br/> with the web.
+            </span>
+          </div>
+        </div>
+      </ion-item>
+</ion-list>
+</ion-content>
+
+<ion-footer class="msg_footer">
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button>
+        <ion-icon color="bright" name="md-volume-up"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-input type="text" placeholder="输入聊天内容..."></ion-input>
+    <ion-buttons end>
+      <button ion-button>
+        <ion-icon color="bright" name="ios-happy-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button>
+        <ion-icon color="bright" name="ios-add-circle-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button id="send">
+        发送
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

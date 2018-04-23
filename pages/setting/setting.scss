@@ -1,0 +1,22 @@
+page-setting {
+    .login_out{
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+    .my_setting button{
+        width: 100%;
+        text-align:left;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .my_setting ion-toggle button{
+        border: none;
+    }
+    .setting_list .item{
+        padding-left: 0; 
+    }
+    .setting_list div{
+        padding-left: 8px; 
+    }
+}

@@ -1,0 +1,36 @@
+page-home {
+    ion-slides,ion-slide{
+        height:auto;
+    }
+    #list-buttons{
+        margin: 0 auto;
+        width:100%;
+    }
+    #title-search{
+        float:right;
+        line-height:40px;
+        padding-right:10px;
+        padding-top:5px;
+    }
+    ion-title img{
+        height:40px;
+        margin-right:20px;
+    }
+    ion-list button{
+        width: 24%;
+        padding:0 auto;
+    }
+    ion-list >div{
+        padding:0 5%;
+    }
+}
+ion-title{
+    text-align: center;
+}
+*{
+    padding: 0 auto;
+    margin: 0 auto;
+}
+ion-list button{
+    background-color: #ffffff;
+}
